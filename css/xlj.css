@@ -1,0 +1,281 @@
+div.wrap_outer {
+    position: relative;
+    /*#161616background: #000 url(../img/bg.jpg) no-repeat center top;*/
+    margin: 0 auto;
+    color: #fff;
+    width: 640px;
+    /*border: 1px solid red;*/
+}
+
+.wrap_inner {
+    margin-bottom: 10px;
+}
+
+.wrap_inner .dl {
+    width: 100%;
+    height: 107px;
+    margin-top: 525px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-bottom: 15px;*/
+    background: url(../img/xlj/dl.jpg) no-repeat 0 0;
+}
+
+.wrap_inner .dl a {
+    display: inline-block;
+    width: 153px;
+    height: 107px;
+    /*border: 1px solid red;*/
+}
+
+
+/*.wrap_inner .dl a.ios {
+    
+}*/
+
+/*.wrap_inner .slide {
+    width: 606px;
+    height: 326px;
+    margin: 15px auto 0 auto;
+    overflow: hidden;
+}*/
+.wrap_inner .slide {
+    width: 606px;
+    height: 326px;
+    margin: 15px auto 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* .slide {
+    width: 465px;
+    height: 235px;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+}*/
+.slide ul.img {
+    position: relative;
+}
+.slide ul.img li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide ul.img li img {
+    display: none;
+}
+.slide ul.img li img.cur {
+    display: block;
+}
+
+.wrap_inner .qidai {
+    width: 605px;
+    height: 305px;
+    margin: 0 auto;
+}
+
+.wrap_inner .qidai li {
+    float: left;
+    width: 294px;
+    height: 140px;
+    margin-top: 15px;
+}
+
+li.game_info,
+li.qidai1 {
+    margin-right: 15px;
+}
+
+.wrap_inner .qidai li a {
+    display: inline-block;
+    width: 294px;
+    height: 140px;
+    position: relative;
+}
+
+.wrap_inner .qidai li.game_info a {
+    /*margin-right: 20px;*/
+    background: url(../img/xlj/game_info.jpg) no-repeat 0 0;
+}
+
+li.fuben a {
+    background: url(../img/xlj/fuben.jpg) no-repeat 0 0;
+}
+
+li.qidai1 a {
+    /*margin-right: 20px;*/
+    background: url(../img/xlj/qidai1.jpg) no-repeat 0 0;
+}
+
+li.qidai2 a {
+    background: url(../img/xlj/qidai2.jpg) no-repeat 0 0;
+}
+
+.wrap_inner .qidai li a span {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    /*border: 1px solid red;*/
+    font-size: 25px;
+    color: #fff;
+}
+
+.wrap_inner .gameInfo {
+    margin-top: 20px;
+    width: 640px;
+    height: 310px;
+    background: url(../img/xlj/gameInfo.jpg) no-repeat 0 0;
+    position: relative;
+}
+
+.wrap_inner .gameInfo p {
+    font-size: 20px;
+    line-height: 35px;
+    color: #fae0c5;
+    width: 521px;
+    /*margin: 85px auto 50px auto;*/
+    position: absolute;
+    top: 81px;
+    left: 63px;
+    /*border: 1px solid red;*/
+}
+div.pop2 {
+    width: 458px;
+    height: 338px;
+    background: url(../img/pop.png) no-repeat 0 0;
+    display: none;
+    position: fixed;
+    top: 390px;
+    left: 50%;
+    margin-left: -205px;
+    z-index: 100;
+}
+div.pop2 .info {
+    width: 384px;
+    height: 104px;
+    position: absolute;
+    top: 103px;
+    left: 50px;
+    font-size: 24px;
+    /*border: 1px solid red;*/
+    color: #000;
+}
+div.pop2 a.close {
+    position: absolute;
+    top: -4px;
+    right: 54px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid red;
+    /*background: url(../img/homepage/btn_close.gif);*/
+}
+
+div.pop {
+    width: 458px;
+    height: 338px;
+    background: url(../img/pop1.png) no-repeat 0 0;
+    display: none;
+    position: fixed;
+    top: 390px;
+    left: 50%;
+    margin-left: -205px;
+    z-index: 100;
+}
+div.pop .info {
+    width: 384px;
+    height: 104px;
+    position: absolute;
+    top: 103px;
+    left: 50px;
+    font-size: 24px;
+    /*border: 1px solid red;*/
+    color: #000;
+}
+div.pop .info p {
+    font-size: 27px;
+}
+div.pop .info p span {
+    display: inline-block;
+    padding: 5px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #000;
+}
+div.pop .info p.tip {
+    font-size: 20px;
+}
+div.pop a.close {
+    position: absolute;
+    top: 26px;
+    right: 31px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid red;
+    /*background: url(../img/homepage/btn_close.gif);*/
+}
+
+div.qq_pop,div.weixin_pop,div.weibo_pop {
+    width: 411px;
+    height: 290px;
+    background: url(../img/pop.png) no-repeat 0 0;
+    display: none;
+    position: fixed;
+    top: 352px;
+    left: 50%;
+    margin-left: -205px;
+    z-index: 100;
+}
+div.qq_pop a.close ,div.weixin_pop a.close ,div.weibo_pop a.close{
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid red;
+}
+div.qq_pop div.content {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 391px;
+    height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    line-height: 41px;`
+}
+
+#weixinMsg {
+    z-index: 100;
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -211px;
+}
+#weixinMsg  .close {
+  width: 61px;
+  height:61px;
+  display: block;
+  background: transparent url(../img/lit_07.jpg) no-repeat scroll 0 0;
+  position: absolute;
+  right: -60px;
+  top: 0;
+  text-indent: -9999px;
+}
+#shadow {
+    display: none;
+}
+#shadow{
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  background-color: rgb(0,0,0);
+  opacity: 0.5;
+  display: none;
+}

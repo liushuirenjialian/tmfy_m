@@ -1,21 +1,5 @@
 $(function() {
 
-    // function checkConnection() {
-    //     var networkState = navigator.network;
-    //     console.log('nihao'+networkState);
-    //     alert(networkState);
-    //     var states = {};
-    //     states[Connection.UNKNOWN]  = 'Unknown connection';
-    //     states[Connection.ETHERNET] = 'Ethernet connection';
-    //     states[Connection.WIFI]     = 'WiFi connection';
-    //     states[Connection.CELL_2G]  = 'Cell 2G connection';
-    //     states[Connection.CELL_3G]  = 'Cell 3G connection';
-    //     states[Connection.CELL_4G]  = 'Cell 4G connection';
-    //     states[Connection.NONE]     = 'No network connection';
-
-    //     document.getElementById('connections').innerHTML = states[networkState];
-    // }
-    // console.log('nihao'+checkConnection());
 
     /*news slide start*/
     var cur = 0;
@@ -38,43 +22,7 @@ $(function() {
         tab(cur);
     }, 3000);
 
-    // $('a.gift').click(function() {
-    //     $('div.pop').css('display', 'block');
-    //     $(".touming_bg").html('<div id="pop" style="height: 2168px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: 0px; left: 0; background: rgb(0, 0, 0);"></div>');
-    // });
-    // $('div.pop a.close').click(function() {
-    //     $('div.pop').css('display', 'none');
-    //     $('.touming_bg').html('');
-    // })
-    // $(".touming_bg").click(function() {
-    //     $('div.pop').css('display', 'none');
-    //     $(".touming_bg").html('');
-    // });
 
-    // function changeSlide() {
-    //     $('ul.dots li').click(function() {
-    //         var index = $('ul.dots li').index($(this));
-    //         cur = index;
-
-    //         tab(cur);
-    //     });
-    // }
-
-    // changeSlide();
-    /*news slide end*/
-
-    // $('img.guanzhu').click(function() {
-    //     $('div.pop').css('display', 'block');
-    //     $(".touming_bg").html('<div id="pop" style="height: 2168px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: 0px; left: 0; background: rgb(0, 0, 0);"></div>');
-    // });
-    // $('div.pop a.close').click(function() {
-    //     $('div.pop').css('display', 'none');
-    //     $('.touming_bg').html('');
-    // })
-    // $(".touming_bg").click(function() {
-    //     $('div.pop').css('display', 'none');
-    //     $(".touming_bg").html('');
-    // });
 
 });
 
@@ -95,49 +43,64 @@ $(function() {
                 // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
 
                 var $ios = $('div.dl').find('a.ios');
-                console.log(data.post.custom_fields);
+                console.log("ios" + data.post.custom_fields.href_url);
                 var custom_fields = data.post.custom_fields;
                 // console.log(custom_fields.url == undefined);
                 if (custom_fields.href_url != undefined) {
 
                     $ios.attr('href', custom_fields.href_url[0]);
+                    $ios.click(function() {
+                        window.location.href = custom_fields.href_url[0];
+                    })
                 } else {
+                    console.log(custom_fields.intro != undefined);
                     if (custom_fields.intro != undefined) {
-                        // var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-                        // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
                         $ios.click(function() {
-                            // $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
-                            // $('div.pop2').find('a.close').css({'top': '-4px','right': '54px'});
-                            $('div.pop2').find('div.info').text(custom_fields.intro[0]);
                             $('div.pop2').css('display', 'block');
-                            $(".touming_bg").html('<div id="pop" style="height: 1770px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: -477px; left: 0; background: rgb(0, 0, 0);"></div>');
+                            $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
+                            $('div.pop2').find('a.close').css({
+                                'top': '-4px',
+                                'right': '54px'
+                            });
+                            $('div.pop2').find('div.info').text('custom_fields.intro[0]');
+                            // $('div.pop2').css('display', 'block');
+                            $('div.pop2').css('display', 'block');
+                            var d = document;
+                            var oShadow = d.getElementById('shadow');
+                            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+                            oShadow.style.height = scrollHeight + 'px';
+                            oShadow.style.display = 'block';
+                            $('#shadow,div.pop2 .close').click(function() {
+                                oShadow.style.display = 'none';
+                                $("div.pop2").hide();
+
+                            });
                         });
-                        $('div.pop2 a.close').click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $('.touming_bg').html('');
-                        })
-                        $(".touming_bg").click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $(".touming_bg").html('');
-                        });
+
                     } else {
-                        // var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-                        // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
+
                         $ios.click(function() {
-                            // $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
-                            // $('div.pop2').find('a.close').css({'top': '-4px','right': '54px'});
-                            $('div.pop2').find('div.info').text('敬请期待！');
                             $('div.pop2').css('display', 'block');
-                            $(".touming_bg").html('<div id="pop" style="height: 1770px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: -477px; left: 0; background: rgb(0, 0, 0);"></div>');
+                            $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
+                            $('div.pop2').find('a.close').css({
+                                'top': '-4px',
+                                'right': '54px'
+                            });
+                            $('div.pop2').find('div.info').text('敬请期待！');
+                            // $('div.pop2').css('display', 'block');
+                            $('div.pop2').css('display', 'block');
+                            var d = document;
+                            var oShadow = d.getElementById('shadow');
+                            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+                            oShadow.style.height = scrollHeight + 'px';
+                            oShadow.style.display = 'block';
+                            $('#shadow,div.pop2 .close').click(function() {
+                                oShadow.style.display = 'none';
+                                $("div.pop2").hide();
+
+                            });
                         });
-                        $('div.pop2 a.close').click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $('.touming_bg').html('');
-                        })
-                        $(".touming_bg").click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $(".touming_bg").html('');
-                        });
+
 
                     }
                 }
@@ -159,42 +122,55 @@ $(function() {
                 if (custom_fields.href_url != undefined) {
 
                     $andr.attr('href', custom_fields.href_url[0]);
+                    $andr.click(function() {
+                        window.location.href = custom_fields.href_url[0];
+                    });
+                    // window.location.href = custom_fields.href_url[0];
                 } else {
                     if (custom_fields.intro != undefined) {
-                        // var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-                        // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
                         $andr.click(function() {
-                            // $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
-                            // $('div.pop2').find('a.close').css({'top': '-4px','right': '54px'});
-                            $('div.pop2').find('div.info').text(custom_fields.intro[0]);
                             $('div.pop2').css('display', 'block');
-                            $(".touming_bg").html('<div id="pop" style="height: 1770px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: -477px; left: 0; background: rgb(0, 0, 0);"></div>');
+                            $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
+                            $('div.pop2').find('a.close').css({
+                                'top': '-4px',
+                                'right': '54px'
+                            });
+                            $('div.pop2').find('div.info').text('custom_fields.intro[0]');
+                            // $('div.pop2').css('display', 'block');
+                            $('div.pop2').css('display', 'block');
+                            var d = document;
+                            var oShadow = d.getElementById('shadow');
+                            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+                            oShadow.style.height = scrollHeight + 'px';
+                            oShadow.style.display = 'block';
+                            $('#shadow,div.pop2 .close').click(function() {
+                                oShadow.style.display = 'none';
+                                $("div.pop2").hide();
+
+                            });
                         });
-                        $('div.pop2 a.close').click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $('.touming_bg').html('');
-                        })
-                        $(".touming_bg").click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $(".touming_bg").html('');
-                        });
+
                     } else {
-                        // var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-                        // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
                         $andr.click(function() {
-                            // $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
-                            // $('div.pop2').find('a.close').css({'top': '-4px','right': '54px'});
-                            $('div.pop2').find('div.info').text("敬请期待！");
                             $('div.pop2').css('display', 'block');
-                            $(".touming_bg").html('<div id="pop" style="height: 1770px; width: 100%; opacity: 0.6; z-index: 99; position: absolute; top: -477px; left: 0; background: rgb(0, 0, 0);"></div>');
-                        });
-                        $('div.pop2 a.close').click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $('.touming_bg').html('');
-                        })
-                        $(".touming_bg").click(function() {
-                            $('div.pop2').css('display', 'none');
-                            $(".touming_bg").html('');
+                            $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
+                            $('div.pop2').find('a.close').css({
+                                'top': '-4px',
+                                'right': '54px'
+                            });
+                            $('div.pop2').find('div.info').text('敬请期待！');
+                            // $('div.pop2').css('display', 'block');
+                            $('div.pop2').css('display', 'block');
+                            var d = document;
+                            var oShadow = d.getElementById('shadow');
+                            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+                            oShadow.style.height = scrollHeight + 'px';
+                            oShadow.style.display = 'block';
+                            $('#shadow,div.pop2 .close').click(function() {
+                                oShadow.style.display = 'none';
+                                $("div.pop2").hide();
+
+                            });
                         });
 
                     }
@@ -204,7 +180,8 @@ $(function() {
         }
     });
 
-    $('div.dl a.ios,div.dl a.android').click(function() {
+    // $('div.dl a.ios,div.dl a.android').click(function() {
+    $('div.dl a.android').click(function() {
         var dataurl = $(this).attr('dataurl');
         var d = document;
         console.log(dataurl)
@@ -217,9 +194,16 @@ $(function() {
 
         });
         if (useragent.indexOf('micromessenger') >= 0) {
-            oShadow.style.height = scrollHeight + 'px';
+            // $('div.pop2').css('display', 'none');
+
             oShadow.style.display = 'block';
+            oShadow.style.height = scrollHeight + 'px';
             d.getElementById("weixinMsg").style.display = 'block';
+
+            // if ((navigator.userAgent.match(/(Android)/i))) {
+            //     d.getElementById("weixinMsg").style.display = 'block';
+            // }
+
         } else {
 
             if ((navigator.userAgent.match(/(Android)/i))) {

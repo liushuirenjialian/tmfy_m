@@ -63,7 +63,7 @@ $(function() {
                                 'top': '-4px',
                                 'right': '54px'
                             });
-                            $('div.pop2').find('div.info').text('custom_fields.intro[0]');
+                            $('div.pop2').find('div.info').text(custom_fields.intro[0]);
                             // $('div.pop2').css('display', 'block');
                             $('div.pop2').css('display', 'block');
                             var d = document;

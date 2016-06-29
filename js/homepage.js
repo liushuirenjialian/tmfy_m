@@ -41,7 +41,8 @@ $(function() {
             if (data.post.custom_fields != {}) {
                 // var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
                 // var scrollWidth = document.documentElement.scrollWidth || document.body.scrollWidth;
-
+ // ios版 没有连接  弹出的是ok
+  // Android  有  错误
                 var $ios = $('div.dl').find('a.ios');
                 console.log("ios" + data.post.custom_fields.href_url);
                 var custom_fields = data.post.custom_fields;
@@ -54,7 +55,7 @@ $(function() {
                     })
                 } else {
                     console.log(custom_fields.intro != undefined);
-                    if (custom_fields.intro != undefined) {
+                    if (custom_fields.intro) {
                         $ios.click(function() {
                             $('div.pop2').css('display', 'block');
                             $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
@@ -127,7 +128,7 @@ $(function() {
                     });
                     // window.location.href = custom_fields.href_url[0];
                 } else {
-                    if (custom_fields.intro != undefined) {
+                    if (custom_fields.intro!=undefined) {
                         $andr.click(function() {
                             $('div.pop2').css('display', 'block');
                             $('div.pop2').css('background', 'url(img/pop.png) no-repeat 0 0');
@@ -135,7 +136,8 @@ $(function() {
                                 'top': '-4px',
                                 'right': '54px'
                             });
-                            $('div.pop2').find('div.info').text('custom_fields.intro[0]');
+                            // 
+                            $('div.pop2').find('div.info').text(custom_fields.intro[0]);
                             // $('div.pop2').css('display', 'block');
                             $('div.pop2').css('display', 'block');
                             var d = document;
@@ -158,7 +160,7 @@ $(function() {
                                 'top': '-4px',
                                 'right': '54px'
                             });
-                            $('div.pop2').find('div.info').text('敬请期待！');
+                            $('div.pop2').find('div.info').text('期待！');
                             // $('div.pop2').css('display', 'block');
                             $('div.pop2').css('display', 'block');
                             var d = document;

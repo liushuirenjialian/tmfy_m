@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--  <meta name="viewport" content="width=device-width,initial-scale=0.3" /> -->
+    <!-- <meta name="viewport" content="width=640,target-densitydpi=320, minimum-scale=0.5, maximum-scale=2,user-scalable=0"> -->
+    <meta name="viewport" content="width=640,user-scalable=yes">
+    <title>探墓风云落地页</title>
+    <link rel="stylesheet" type="text/css" href="Luodiye/css/style.css">
+    <link rel="stylesheet" type="text/css" href="Luodiye/css/download.css">
+    
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="btns">
+            <!-- <a class="ios" href="javascript:;">ios下载</a> -->
+            <a class="android" href="javascript:;">android下载</a>
+        </div>
+    </div>
+    <div id="weixinMsg" class="weixin">
+        <img src="Luodiye/img/tip.png">
+        <a href="javascript:;" class="close"></a>
+    </div>
+    <div id="shadow"></div>
+    <script type="text/javascript" src="Luodiye/js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var useragent = window.navigator.userAgent.toLowerCase();
+
+       //Android按钮
+       //按钮点击事件
+        $('div.btns a.android').click(function() {
+            var d = document;
+            var oShadow = d.getElementById('shadow');
+            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+            $('#shadow,#weixinMsg .close').click(function() {
+                oShadow.style.display = 'none';
+                $("#weixinMsg").hide();
+
+            });
+            //微博环境下点击按钮弹窗
+            if (useragent.match(/weibo/i) == 'weibo') {
+
+                oShadow.style.display = 'block';
+                oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg").style.display = 'block';
+
+
+            }
+            //微信环境下点击按钮弹窗
+            if (useragent.match(/MicroMessenger/i) == 'micromessenger') {
+                oShadow.style.display = 'block';
+                oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg").style.display = 'block';
+
+            }
+            // 匹配终端类型Android系统用户 跳转下载链接  非苹果系统  安卓包
+            else if((useragent.match(/(iphone|ipod|ios|ios|ipad)/i))){
+            
+            }
+            else 
+          {
+                location.replace("http://image.ftzn.qq.com/tmw_hoolai.apk");
+          }
+
+        });
+
+
+     /*  $(window).load(function(){
+          if ((useragent.match(/(iPhone|iPod|ios|iOS|iPad)/i))){
+        location.replace("http://tracking.hoolai.com/tracking/218/");
+
+        /*}*/
+/*        }
+    }) */
+    });
+    </script>
+</body>
+
+</html>

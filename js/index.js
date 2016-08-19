@@ -46,6 +46,7 @@ $(function() {
         // var checked = $('input[type="radio"]:checked').val();
         var $andri = $('.radioselect .andr');
         var $ios = $('.radioselect .ios');
+        var qd  = getQueryString('qd');
         if ($andri.hasClass('shadow')) {
             if (!checkedMobile(phone)) {
             return;
@@ -53,7 +54,7 @@ $(function() {
             $.ajax({
                 type: 'post',
                 dataType: 'json',
-                url: apiUrl + "/tmfy_ph_add/phone.php?pt=an&ph=" + phone,
+                url: apiUrl + "/tmfy_ph_add/phone.php?pt=an&ph=" + phone +"&qd=" + qd,
                 success: function(json) {
                     if (json.ret == 'error') { // 失败
                         alert(json.msg);
@@ -69,7 +70,7 @@ $(function() {
                 }
             })
         } else if ($ios.hasClass('sha')) {
-            var iosUrl = apiUrl + "/tmfy_ph_add/phone.php?pt=ios&ph=" + phone;
+            var iosUrl = apiUrl + "/tmfy_ph_add/phone.php?pt=ios&ph=" + phone+"&qd="+qd;
             if (!checkedMobile(phone)) {
             return;
         }
@@ -99,6 +100,12 @@ $(function() {
         }
         return true;
     }
+    function getQueryString (qd) { 
+  var reg = new RegExp("(^|&)" + qd + "=([^&]*)(&|$)", "i"); 
+  var r =decodeURIComponent(window.location.search).substr(1).match(reg); 
+  if (r != null) return unescape(r[2]); return null; 
+} 
+
     $('.yuyueXitong .andr').on('click', function() {
         $(this).addClass('shadow');
         $('.ios').removeClass('sha');

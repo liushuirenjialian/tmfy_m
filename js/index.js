@@ -63,7 +63,7 @@ $(function() {
                     refN();
                     // alert('success');
                     $('.gongxi').attr('style', 'display:block');
-                    $('form').hide();
+            
                     $('.mengceng').html('<div style="height: ' + height + 'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
 
 
@@ -122,46 +122,10 @@ $(function() {
         $('.gongxi').hide();
         $('.mengceng').html('');
     })
-    $('.yuyue').click(function() {
-        $('.yuyuew, form').attr('style', 'display:block');
-        $('.mengceng').html('<div style="height: ' + height + 'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
-
-    })
+   
     $('.yuyuew .close').click(function() {
-        $('.yuyuew').hide();
+        $('.gongxi').hide();
         $('.mengceng').html('');
 
-    })
-
-    $('.weixin').click(function() {
-        $('#weixins').attr('style', 'display:block');
-        $('.mengceng').html('<div style="height: ' + height + 'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
-
-
-    })
-    $('.weixin_sec .close_weixin').click(function() {
-        $('.weixin_sec').hide();
-        $('.mengceng').html('');
-    })
-
-    $('.qq').click(function() {
-        $('#wanjia').attr('style', 'display:block');
-        $('.mengceng').html('<div style="height: ' + height + 'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
-    })
-    $('#wanjia .close_weixin').click(function() {
-        $('.wanjia').hide();
-        $('.mengceng').html('');
-    })
-
-
-    $('.iosdown,.andrdown').click(function() {
-        $('.ios_swc').attr('style', 'display:block');
-        $('.mengceng').html('<div style="height: ' + height + 'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
-
-
-    })
-    $('.ios_swc .close_weixin').click(function() {
-        $('.ios_swc').hide();
-        $('.mengceng').html('');
-    })
+    })   
 })

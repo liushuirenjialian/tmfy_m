@@ -42,11 +42,17 @@
 }
         var hash=window.location.search;
         var args = getQuerystringArg(hash);
-        console.log(args.qd);
+        // console.log(args);
         if ((navigator.userAgent.match(/(iphone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i))) {}else
         {
-             location.replace("http://tmfy.hulai.com/yuyue.html?qd="+args.qd)
+            if(args === undefined)
+            {
+               location.replace("http://tmfy.hulai.com/yuyue.html");
+            }
+            else{
+           location.replace("http://tmfy.hulai.com/yuyue.html?qd="+args.qd)
         }
+    }
     })
 
 
@@ -57,6 +63,9 @@
 <body>
     <div class="wrap">
         <section>
+         <audio src="js/sancun.mp3"  autoplay="autoplay" loop>
+               <h5 style="color:red;">hi，您的浏览器不支持这个音频文件，请升级！</h5> 
+            </audio>
             <div class="baoxiang"></div>
             <div class="yuyueXitong">
                 <div class="radioselect">
@@ -73,7 +82,7 @@
                 </div>
                 <div class="yiyou">已有<span id="allNum">2222</span>人预约</div>
             </div>
-                <a href="" class="digong"></a>
+                <a target='_blank' href="http://tmfy.hulai.com/tanxian.html" class="digong"></a>
             <div class="slidecontent">
               <div class="slide f1">
                 <ul class="img">
@@ -102,6 +111,7 @@
                 </ul> -->
             </div>
             </div>
+           
         </section>
 
         <div class="mengceng"></div>
@@ -111,8 +121,6 @@
         <!-- <span class="letter">游戏下载即将开启，请进行游戏预约，<br/>  或关注官方微信、加入玩家群，第一时间获得资讯</span> -->
     </div>
     </div>
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 

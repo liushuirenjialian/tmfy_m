@@ -27,7 +27,7 @@ a:hover {
 }
 
 body {
-    background: #0e0e0e url(../img/bg1.jpg) no-repeat center top;
+    background: #0e0e0e url(../img/homepage/bg1.jpg) no-repeat center top;
 }
 ul.nav {
     z-index: 100;

@@ -215,6 +215,28 @@ $(function() {
 
     })
 
+   
+    $('div.last').click(function() {
+        $('div.tanchuang').css('display','block');
+    });
+    $('div.cha').click(function() {
+        $('div.tanchuang').css('display','none');
+    });
+    $(function() {
+    var height=document.documentElement.scrollHeight || document.body.scrollHeight;
+    $('.only').click(function(){
+        $('.y_vid').show();
+        $('.mengceng').html('<div style="height: '+height+'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
+    })
+    $('.close_video').click(function(){
+        $('.y_vid').hide();
+        $('.mengceng').html('');
+    })
+   })
+
+
+
+
     $('ul.nav li.weixin').click(function() { //nav栏点击微信按钮弹窗
         $('div.weixin_pop').css('display', 'block');
 

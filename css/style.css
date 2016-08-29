@@ -29,27 +29,16 @@ a:hover {
 body {
     background: #0e0e0e url(../img/homepage/bg1.jpg) no-repeat center top;
 }
-ul.nav {
-    z-index: 100;
-    width: 640px;
-    height: 100px;
-    background: url(../img/nav_bg.jpg) repeat-x 0 0;
-    position: fixed;
-    left: 50%;
-    margin-left: -320px;
-    top: 0;
-    /*border: 1px solid red;*/
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 12px;
 }
-
-ul.nav li {
-    display: block;
-    width: 83px;
-    height: 100px;
-    float: left;
-    margin-left: 62px;
-    /*border: 1px solid red;*/
+.button{
+    position: absolute;
+    top: 350px;
+    left: 163px;
 }
-
 ul.nav li.luntan {
     background: url(../img/luntan.jpg) no-repeat 0 0;
 }
@@ -73,8 +62,9 @@ ul.nav li a {
 div.foot_btn {
     z-index: 9;
     width: 640px;
-    height: 217px;
+    height: 395px;
     margin: 0 auto;
+    margin-top: 15px;
     /*background-color: #161616;*/
     /*position: absolute;
 	bottom: 0px;
@@ -83,12 +73,26 @@ div.foot_btn {
     /*border: 1px solid red;*/
 }
 
+div.foot_btn1{
+    z-index: 9;
+    width: 640px;
+    height: 214px;
+    margin: 0 auto;
+    margin-top: 15px;
+    /*background-color: #161616;*/
+    /*position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -320px;*/
+    /*border: 1px solid red;*/
+}
+
 div.foot_btn a.btn {
     display: block;
-    width: 208px;
-    height: 60px;
+    width: 205px;
+    height: 66px;
     margin: 0 auto;
-    background: url(../img/btn.jpg) no-repeat 0 0;
+    background: url(../img/btn.png) no-repeat 0 0;
     text-align: center;
     font-weight: bold;
 }
@@ -106,6 +110,10 @@ div.foot_btn .foot {
     margin-top: 10px;
     line-height: 30px;
     color: #fff;
+}
+
+div.foot_btn .foot .one{
+    margin-top: 30px;
 }
 
 div.qq_pop,div.weixin_pop,div.weibo_pop {
@@ -163,4 +171,73 @@ div.weixin_pop img {
   background-color: rgb(0,0,0);
   opacity: 0.5;
   display: none;
+}
+
+.leebao{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 640px;
+    height: 208px;
+    background: url(../img/leebao.png) no-repeat 0 0;
+}
+.leebao .android{
+    width: 211px;
+    height: 68px;
+    margin-top: 54px;
+    background: url(../img/anzhuo.png) no-repeat 0 0;
+    margin-left: 76px;
+}
+.leebao .ios1{
+    width: 211px;
+    height: 67px;
+    background: url(../img/ios.png) no-repeat 0 0;
+    margin-left: 76px;
+    margin-top: 4px;
+}
+.leebao .last{
+    width: 211px;
+    height: 68px;
+    float: right;
+    margin-right: 77px;
+    margin-top: -67px;
+    background: url(../img/last.png) no-repeat 0 0;
+}
+.tanchuang{
+    background: url(../img/tanchuang1.jpg) no-repeat 0 0;
+    width: 407px;
+    height: 244px;
+    position: fixed;
+    top: 200px;
+    left: 120px;
+    display: none;
+}
+.cha{
+    width: 12px;
+    height: 12px;
+    background: url(../img/cha.jpg) no-repeat 0 0;
+    position: fixed;
+    top: 214px;
+    left: 500px;
+}
+.y_vid {
+    background-color: #000;
+    width: 71%;
+    height: 23%;
+    position: fixed;
+    top: 10%;
+    z-index: 10000;
+    left: 50%;
+    margin-left: -37%;
+    /*border: 2px solid #444;*/
+}
+a.close_video {
+    width: 34px;
+    height: 37px;
+    display: block;
+    background: transparent url(../img/only.gif) no-repeat scroll 0 0;
+    position: absolute;
+    right: -34px;
+    top: 0;
+    text-indent: -9999px;
 }

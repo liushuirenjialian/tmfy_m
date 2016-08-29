@@ -24,6 +24,37 @@ $(function() {
         eventT(xuhao);
     })
 
+    // $(".only").click(function () {
+    //     $(".y_vid").css("display","block");
+    //     $(".y_vid #video").attr("style","visibility:visible;");
+    //     $(".touming_bg").html('    <div id="pop_video2_popwin_bg" style="height: 1133px; opacity: 0.6; width: 100%; z-index: 9999; position: absolute; top: -50px; left: 0px; background: rgb(0, 0, 0);"></div>')
+    //   });
+
+    // $(".y_vid .close_video").click(function () {
+    //     $(".y_vid").attr("style","display:none;");
+    //     $(".y_vid #video").attr("style","visibility:hidden;");
+    //     $(".touming_bg").html('');
+    // });
+
+
+
+$(function() {
+    var height=document.documentElement.scrollHeight || document.body.scrollHeight;
+    $('.only').click(function(){
+    $('.y_vid').show();
+    // $('.mengceng').html('<div style="height: '+height+'px;opacity:0.6;width:100%;position:absolute;top:-50px;left:0px;background:rgb(0,0,0);"></div>')
+    })
+  $('.close_video').click(function(){
+    $('.gongxi').hide();
+    // $('.mengceng').html('');
+    })
+   })
+
+
+
+
+
+
     function userCL() {
         $('ul.dot').delegate('li', 'click', function() {
         });

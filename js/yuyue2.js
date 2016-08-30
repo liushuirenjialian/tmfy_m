@@ -1,28 +1,31 @@
-$(function() {
-    var cur = 0;
-    var shijian = null;
-    var len = $('.slide ul.img li').length;
-    var $li = $('.slide ul.img li');
-    var $li_dot = $('.slide ul.dot li');
 
-    function eventT(cur) {
-        // body...
-        $li.find('img').fadeOut('slow');
-        $li_dot.removeClass('cur');
-        $li.eq(cur).find('img').fadeIn('fast');
-        $li_dot.eq(cur).addClass('cur');
-    }
-    shijian = setInterval(function() {
-        cur++;
-        cur = (cur + length) % len;
-        eventT(cur);
-    }, 1900);
-    $('ul.dot li').click(function() {
-        var $this = $(this);
-        var xuhao = $('ul.dot li').index($this);
-        // var cur;
-        eventT(xuhao);
-    })
+   // phone.php => phone_yuyue3.php phone_yuyue2.php phone_yuyue1.php
+   // getnu.php getnu_yuyue1.php getnu_yuyue2.php getnu_yuyue3.php
+$(function() {
+    // var cur = 0;
+    // var shijian = null;
+    // var len = $('.slide ul.img li').length;
+    // var $li = $('.slide ul.img li');
+    // var $li_dot = $('.slide ul.dot li');
+
+    // function eventT(cur) {
+    //     // body...
+    //     $li.find('img').fadeOut('slow');
+    //     $li_dot.removeClass('cur');
+    //     $li.eq(cur).find('img').fadeIn('fast');
+    //     $li_dot.eq(cur).addClass('cur');
+    // }
+    // shijian = setInterval(function() {
+    //     cur++;
+    //     cur = (cur + length) % len;
+    //     eventT(cur);
+    // }, 1900);
+    // $('ul.dot li').click(function() {
+    //     var $this = $(this);
+    //     var xuhao = $('ul.dot li').index($this);
+    //     // var cur;
+    //     eventT(xuhao);
+    // })
     $(function() {
         var height = document.documentElement.scrollHeight || document.body.scrollHeight;
         $('.only').click(function() {
@@ -41,7 +44,7 @@ $(function() {
     var apiUrl = "http://119.29.196.195";
     var height = document.documentElement.scrollHeight || document.body.scrollHeight;
     function refN() {
-        var getAll = apiUrl + '/tmfy_ph_add/getnu.php?pt=all';
+        var getAll = apiUrl + '/tmfy_ph_add/getnu_yuyue2.php?pt=all';
         $.get(getAll, function(data) {
             $('#allNum').text(data.msg);
         }, 'json');
@@ -55,14 +58,14 @@ $(function() {
         var $andri = $('.radioselect .andr');
         var $ios = $('.radioselect .ios');
         var qd = getQueryString('qd');
-        if ($andri.hasClass('shadow')) {
+        if ($andri.hasClass('shadow1')) {
             if (!checkedMobile(phone)) {
                 return;
             }
             $.ajax({
                 type: 'post',
                 dataType: 'json',
-                url: apiUrl + "/tmfy_ph_add/phone.php?pt=an&ph=" + phone + "&qd=" + qd,
+                url: apiUrl + "/tmfy_ph_add/phone_yuyue2.php?pt=an&ph=" + phone + "&qd=" + qd,
                 success: function(json) {
                     if (json.ret == 'error') { // 失败
                         alert(json.msg);
@@ -77,8 +80,8 @@ $(function() {
 
                 }
             })
-        } else if ($ios.hasClass('sha')) {
-            var iosUrl = apiUrl + "/tmfy_ph_add/phone.php?pt=ios&ph=" + phone + "&qd=" + qd;
+        } else if ($ios.hasClass('sha1')) {
+            var iosUrl = apiUrl + "/tmfy_ph_add/phone_yuyue2.php?pt=ios&ph=" + phone + "&qd=" + qd;
             if (!checkedMobile(phone)) {
                 return;
             }
@@ -99,7 +102,6 @@ $(function() {
         }
 
     })
-
     function checkedMobile(mobile) {
         var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
         if (!myreg.test(mobile)) {
@@ -117,12 +119,12 @@ $(function() {
     }
 
     $('.yuyueXitong .andr').on('click', function() {
-        $(this).addClass('shadow');
-        $('.ios').removeClass('sha');
+        $(this).addClass('shadow1');
+        $('.ios').removeClass('sha1');
     })
     $('.yuyueXitong .ios').on('click', function() {
-        $(this).addClass('sha');
-        $('.andr').removeClass('shadow');
+        $(this).addClass('sha1');
+        $('.andr').removeClass('shadow1');
 
         // $(this).siblings().removeClass('shadow');
 

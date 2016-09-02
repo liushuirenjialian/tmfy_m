@@ -36,7 +36,7 @@ function getRandomDesc(){
 function define_wx_share(jsTicket){
     var time = this.timestamp();
     var nonce = this.nonceStr();
-    var title = '《探墓风云》预约秒送花费！';
+    var title = '《探墓风云》预约秒送话费！';
     var desc = getRandomDesc();
 
     wx.config({

@@ -2,30 +2,6 @@
    // phone.php => phone_yuyue3.php phone_yuyue2.php phone_yuyue1.php
    // getnu.php getnu_yuyue1.php getnu_yuyue2.php getnu_yuyue3.php
 $(function() {
-    // var cur = 0;
-    // var shijian = null;
-    // var len = $('.slide ul.img li').length;
-    // var $li = $('.slide ul.img li');
-    // var $li_dot = $('.slide ul.dot li');
-
-    // function eventT(cur) {
-    //     // body...
-    //     $li.find('img').fadeOut('slow');
-    //     $li_dot.removeClass('cur');
-    //     $li.eq(cur).find('img').fadeIn('fast');
-    //     $li_dot.eq(cur).addClass('cur');
-    // }
-    // shijian = setInterval(function() {
-    //     cur++;
-    //     cur = (cur + length) % len;
-    //     eventT(cur);
-    // }, 1900);
-    // $('ul.dot li').click(function() {
-    //     var $this = $(this);
-    //     var xuhao = $('ul.dot li').index($this);
-    //     // var cur;
-    //     eventT(xuhao);
-    // })
     $(function() {
         var height = document.documentElement.scrollHeight || document.body.scrollHeight;
         $('.only').click(function() {
@@ -44,7 +20,7 @@ $(function() {
     var apiUrl = "http://119.29.196.195";
     var height = document.documentElement.scrollHeight || document.body.scrollHeight;
     function refN() {
-        var getAll = apiUrl + '/tmfy_ph_add/getnu_yuyue2.php?pt=all';
+        var getAll = apiUrl + '/tmfy_ph_add/getnu.php?pt=all';
         $.get(getAll, function(data) {
             $('#allNum').text(data.msg);
         }, 'json');

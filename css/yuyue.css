@@ -130,7 +130,7 @@ body {
           width: 222px;
           height: 54px; }
         body .wrap .yuyueXitong .radioselect .ios {
-          background: url("../img/ios.png") no-repeat;
+          background: url("../img/ios_yuyuye.png") no-repeat;
           width: 222px;
           height: 54px; }
       body .wrap .yuyueXitong input::-webkit-input-placeholder {
@@ -157,13 +157,21 @@ body {
         top: 184px;
         left: 209px; }
       body .wrap .yuyueXitong .yiyou {
+        background: url("../img/yuyue/yiyou.png") no-repeat;
+        width: 325px;
+        height: 80px;
         font-size: 18px;
-        color: #7a5d41;
+        color: #ff0000;
         position: relative;
         top: 265px;
-        text-align: center; }
+        text-align: center;
+        left: 24%; }
+        body .wrap .yuyueXitong .yiyou .cc {
+          top: 26px;
+          text-align: center;
+          position: relative; }
         body .wrap .yuyueXitong .yiyou #allNum {
-          color: red; }
+          color: #ffcc00; }
     body .wrap .hov {
       cursor: pointer; }
     body .wrap .content {
@@ -446,7 +454,7 @@ body {
       width: 229px;
       height: 70px; }
     .wrap1 .yuyueXitong .sha1 {
-      background: url("../img/yuyue/ioss.png") no-repeat !important;
+      background: url("../img/yuyue/iosss.png") no-repeat !important;
       width: 229px;
       height: 70px; }
     .wrap1 .yuyueXitong .radioselect {
@@ -459,11 +467,11 @@ body {
         display: inline-block;
         cursor: pointer; }
       .wrap1 .yuyueXitong .radioselect .andr {
-        background: url("../img/yuyue/an_anxia.png") no-repeat;
+        background: url("../img/yuyue/and_anxia.png") no-repeat;
         width: 217px;
         height: 56px; }
       .wrap1 .yuyueXitong .radioselect .ios {
-        background: url("../img/yuyue/ios_anxia.png") no-repeat;
+        background: url("../img/yuyue/iosd_anxia.png") no-repeat;
         width: 217px;
         height: 56px; }
     .wrap1 .yuyueXitong input::-webkit-input-placeholder {
@@ -491,13 +499,21 @@ body {
       top: 186px;
       left: 209px; }
     .wrap1 .yuyueXitong .yiyou {
+      background: url("../img/yuyue/yiyou.png") no-repeat;
+      width: 325px;
+      height: 80px;
       font-size: 18px;
-      color: #7a5d41;
+      color: #ff0000;
       position: relative;
       top: 265px;
-      text-align: center; }
+      text-align: center;
+      left: 24%; }
+      .wrap1 .yuyueXitong .yiyou .cc {
+        top: 26px;
+        text-align: center;
+        position: relative; }
       .wrap1 .yuyueXitong .yiyou #allNum {
-        color: red; }
+        color: #ffcc00; }
   .wrap1 .hov {
     cursor: pointer; }
   .wrap1 .content {
@@ -523,13 +539,13 @@ body {
       left: 329px;
       top: 50px; }
     .wrap1 .content .iosdown {
-      background: url(../img/ios.png) no-repeat;
+      background: url(../img/iosss.png) no-repeat;
       width: 196px;
       height: 68px;
       left: 119px;
       top: 222px; }
     .wrap1 .content .andrdown {
-      background: url(../img/and.png) no-repeat;
+      background: url(../img/and.jpg) no-repeat;
       width: 196px;
       height: 68px;
       left: 326px;
@@ -607,11 +623,11 @@ body {
     width: 640px;
     height: 850px; }
   .wrap2 .yuyueXitong {
-    top: 820px;
+    top: 780px;
     left: 14px;
-    background: url(../img/xitong.png) no-repeat;
+    background: url(../img/youxi_n.png) no-repeat;
     width: 625px;
-    height: 330px;
+    height: 352px;
     position: relative; }
     .wrap2 .yuyueXitong .shadow1 {
       background: url("../img/yuyue/android.png") no-repeat !important;
@@ -662,13 +678,21 @@ body {
       top: 184px;
       left: 209px; }
     .wrap2 .yuyueXitong .yiyou {
+      background: url("../img/yuyue/yiyou.png") no-repeat;
+      width: 325px;
+      height: 80px;
       font-size: 18px;
-      color: #7a5d41;
+      color: #ff0000;
       position: relative;
       top: 265px;
-      text-align: center; }
+      text-align: center;
+      left: 24%; }
+      .wrap2 .yuyueXitong .yiyou .cc {
+        top: 26px;
+        text-align: center;
+        position: relative; }
       .wrap2 .yuyueXitong .yiyou #allNum {
-        color: red; }
+        color: #ffcc00; }
   .wrap2 .hov {
     cursor: pointer; }
   .wrap2 .content {
@@ -700,6 +724,201 @@ body {
       left: 119px;
       top: 222px; }
     .wrap2 .content .andrdown {
+      background: url(../img/and.png) no-repeat;
+      width: 196px;
+      height: 68px;
+      left: 326px;
+      top: 219px; }
+
+.wrap3 {
+  background: url(../img/yuyue/bg2.jpg) no-repeat;
+  width: 640px;
+  height: 2222px;
+  margin: 0 auto; }
+  .wrap3 .digong {
+    width: 231px;
+    height: 78px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 381px;
+    margin-left: 312px; }
+  .wrap3 .gongxi {
+    z-index: 99999;
+    background: url(http://cdn.tmfy.hulai.com/img/tanchuang.png) no-repeat;
+    width: 413px;
+    height: 224px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -206px;
+    margin-top: -112px; }
+    .wrap3 .gongxi .close_weixin {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      top: 23px;
+      cursor: pointer; }
+  .wrap3 .slidecontent {
+    width: 502px;
+    height: 300px;
+    margin-top: 130px;
+    margin-left: 69px; }
+    .wrap3 .slidecontent .slide {
+      position: absolute; }
+    .wrap3 .slidecontent .slide ul.img {
+      position: relative; }
+    .wrap3 .slidecontent .slide ul.img li {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .wrap3 .slidecontent .slide ul li img {
+      width: 495px;
+      height: 280px; }
+    .wrap3 .slidecontent .slide ul.dot {
+      position: absolute;
+      width: 123px;
+      height: 32px;
+      border: 1px solid red;
+      right: 38px;
+      bottom: 2px; }
+    .wrap3 .slidecontent .slide ul.dot li.dot1 {
+      width: 15px;
+      height: 14px;
+      float: left;
+      margin-right: 7px; }
+    .wrap3 .slidecontent .slide .dott1 {
+      background: url(../img/cur_white.png) no-repeat;
+      width: 22px;
+      height: 22px; }
+    .wrap3 .slidecontent .slide ul.dot li.cur {
+      display: inline-block;
+      background: url(../img/cur.png) no-repeat;
+      width: 22px;
+      height: 22px; }
+  .wrap3 .baoxiang {
+    width: 640px;
+    height: 850px; }
+  .wrap3 .yuyueXitong {
+    top: -80px;
+    left: 14px;
+    background: url(../img/youxi_n.png) no-repeat;
+    width: 625px;
+    height: 352px;
+    position: relative; }
+    .wrap3 .yuyueXitong .shadow {
+      background: url("../img/and_hov.png") no-repeat !important;
+      width: 231px;
+      height: 54px; }
+    .wrap3 .yuyueXitong .sha {
+      background: url("../img/ios_hov.png") no-repeat !important;
+      width: 231px;
+      height: 54px; }
+    .wrap3 .yuyueXitong .radioselect {
+      height: 56px;
+      width: 448px;
+      position: absolute;
+      top: 90px;
+      left: 85px; }
+      .wrap3 .yuyueXitong .radioselect .pp {
+        display: inline-block;
+        cursor: pointer; }
+      .wrap3 .yuyueXitong .radioselect .andr {
+        background: url("../img/and.png") no-repeat;
+        width: 222px;
+        height: 54px; }
+      .wrap3 .yuyueXitong .radioselect .ios {
+        background: url("../img/ios_yuyuye.png") no-repeat;
+        width: 222px;
+        height: 54px; }
+    .wrap3 .yuyueXitong input::-webkit-input-placeholder {
+      color: #000; }
+    .wrap3 .yuyueXitong input:-moz-placeholder {
+      color: #000; }
+    .wrap3 .yuyueXitong .phone_msg {
+      position: absolute;
+      top: 142px;
+      left: 127px; }
+      .wrap3 .yuyueXitong .phone_msg .enter_phone {
+        background: url("../img/yuyue/input.png") no-repeat;
+        width: 167px;
+        height: 43px;
+        text-align: center;
+        color: #fff;
+        font-size: 19px;
+        border: 3px solid rgba(189, 17, 177, 0.05); }
+      .wrap3 .yuyueXitong .phone_msg .enter_yanzheng {
+        margin-left: 10px;
+        background: url("../img/yuyue/yanzheng.png") no-repeat;
+        width: 79px;
+        height: 34px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        border: 3px solid rgba(189, 17, 177, 0.05); }
+      .wrap3 .yuyueXitong .phone_msg .huoqu {
+        background: url("../img/yuyue/shuru.png") no-repeat;
+        width: 81px;
+        height: 38px;
+        position: absolute;
+        top: 11px;
+        right: -86px;
+        border: 3px solid rgba(189, 17, 177, 0.05); }
+    .wrap3 .yuyueXitong .daoyou {
+      background: url(../img/daodou.png) no-repeat;
+      width: 201px;
+      height: 90px;
+      position: absolute;
+      top: 184px;
+      left: 209px; }
+    .wrap3 .yuyueXitong .yiyou {
+      background: url("../img/yuyue/yiyou.png") no-repeat;
+      width: 325px;
+      height: 80px;
+      font-size: 18px;
+      color: #ff0000;
+      position: relative;
+      top: 265px;
+      text-align: center;
+      left: 24%; }
+      .wrap3 .yuyueXitong .yiyou .cc {
+        top: 26px;
+        text-align: center;
+        position: relative; }
+      .wrap3 .yuyueXitong .yiyou #allNum {
+        color: #ffcc00; }
+  .wrap3 .hov {
+    cursor: pointer; }
+  .wrap3 .content {
+    position: relative;
+    height: 150px;
+    bottom: -848px; }
+    .wrap3 .content .pos {
+      position: absolute; }
+    .wrap3 .content .yuyue {
+      background: url(../img/yuyue.png) no-repeat;
+      width: 225px;
+      height: 112px;
+      left: 91px; }
+    .wrap3 .content .weixin {
+      background: url(../img/of_wexin.png) no-repeat;
+      width: 216px;
+      height: 51px;
+      left: 329px; }
+    .wrap3 .content .qq {
+      background: url(../img/qq.png) no-repeat;
+      width: 216px;
+      height: 51px;
+      left: 329px;
+      top: 50px; }
+    .wrap3 .content .iosdown {
+      background: url(../img/ios.png) no-repeat;
+      width: 196px;
+      height: 68px;
+      left: 119px;
+      top: 222px; }
+    .wrap3 .content .andrdown {
       background: url(../img/and.png) no-repeat;
       width: 196px;
       height: 68px;

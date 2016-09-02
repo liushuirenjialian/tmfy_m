@@ -44,7 +44,7 @@ $(function() {
     var apiUrl = "http://119.29.196.195";
     var height = document.documentElement.scrollHeight || document.body.scrollHeight;
     function refN() {
-        var getAll = apiUrl + '/tmfy_ph_add/getnu_yuyue1.php?pt=all';
+        var getAll = apiUrl + '/tmfy_ph_add/getnu.php?pt=all';
         $.get(getAll, function(data) {
             $('#allNum').text(data.msg);
         }, 'json');

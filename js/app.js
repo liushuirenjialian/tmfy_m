@@ -40,7 +40,7 @@ function define_wx_share(jsTicket){
     var desc = getRandomDesc();
 
     wx.config({
-        debug: true,
+        debug: false,
         appId: "wx643f4ff723f51c58",
         timestamp:time,
         nonceStr:nonce,

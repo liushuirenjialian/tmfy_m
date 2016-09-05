@@ -148,6 +148,7 @@ $(function() {
         });
     }); //end weixin_pop
 
+
     // $('ul.nav li.weibo').click(function() { //nav栏点击微博按钮弹窗
     //     $('div.weibo_pop').css('display', 'block');
 

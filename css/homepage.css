@@ -55,9 +55,9 @@ div.wrap_outer {
     height: 58px;
     background: url(../img/homepage/server.jpg) no-repeat 0 0;   
 }
-.wrap_inner .server h3 {
+.wrap_inner .server a {
     /*border: 1px solid red;*/
-    width: 582px;
+    width: 480px;
     height: 58px;
     color: #fdfed9;
     font-size: 24px;
@@ -67,6 +67,7 @@ div.wrap_outer {
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: 0 auto;
+    display: block;
 }
 .wrap_inner .news {
 	position: relative;

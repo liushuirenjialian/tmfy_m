@@ -15,11 +15,11 @@
 
      <script type="text/javascript">
     /*pc or phone*/
-    $(function(){
-        if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i))){} else {
-           location.replace("http://tmfy.hulai.com/index.html")
-        }
-    });
+    // $(function(){
+    //     if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i))){} else {
+    //        location.replace("http://tmfy.hulai.com/index.html")
+    //     }
+    // });
     </script>
 </head>
 
@@ -159,31 +159,40 @@
         <img src="img/pic_11.png" width="100%">
         <a href="javascript:;" class="close"></a>
     </div> -->
-    <!-- <div class="qq_pop">
+<!--     <div class="qq_pop">
         <a href="javascript:;" class="close"></a>
         <div class="content">
             <p>寻龙诀玩家交流群 </p>
             <p>491059218</p>
         </div>
-    </div>
-    <div class="weixin_pop">
+    </div> -->
+    <!-- <div class="weixin_pop">
         <img src="img/weixin_erweima.jpg" alt="">
         <a href="javascript:;" class="close"></a>
     </div>
     <div class="weibo_pop">
         <div class="content">敬请期待！</div>
         <a href="javascript:;" class="close"></a>
-    </div>
-    <div id="shadow"></div> -->
+    </div> -->
+
 
     <div class="leebao">
         <div class="android"></div>
         <div class="ios1">
-           <a href="http://tracking.hoolai.com/tracking/508/"><img src="img/ios.png" alt=""> </a>
+           <a href="javascript:;" id="mianfei"><img src="img/ios.png" alt=""> </a>
         </div>
         <div class="last">
         </div>
     </div>
+
+    <div id="weixinMsg" class="weixin">
+            <img src="img/tip.png">
+            <a href="javascript:;" id="mianfei" >
+            </a>
+        </div>
+    <div id="shadow"></div>
+
+    
     <div class="tanchuang">
         <div class="cha">
             
@@ -201,6 +210,37 @@
         </div>
     </div>
     
+
+    <script type="text/javascript">
+      $(function() {
+        var useragent = window.navigator.userAgent.toLowerCase();
+        $('#mianfei').click(function() {
+           /* e.preventDefault();*/
+            var d = document;
+            var oShadow = d.getElementById('shadow');
+            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+            $('#shadow,#weixinMsg .close').click(function() {
+                oShadow.style.display = 'none';
+                $("#weixinMsg").hide();
+            });
+            if (useragent.match(/weibo/i) == 'weibo') {
+                oShadow.style.display = 'block';
+                oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg").style.display = 'block';
+            }
+            if (useragent.match(/MicroMessenger/i) == 'micromessenger') {
+                oShadow.style.display = 'block';
+                oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg").style.display = 'block';
+                // e.preventDefault();
+               /* location.replace("http://erweimads.zcfy.hulai.com/");*/
+            }
+            else if((useragent.match(/(iPhone|iPod|ios|iOS|iPad)/i))){
+                location.replace("http://tracking.hoolai.com/tracking/508/");
+            } 
+       })
+        });
+    </script>
 </body>
 
 </html>

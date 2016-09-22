@@ -187,6 +187,10 @@ div.weixin_pop img {
     margin-top: 54px;
     background: url(../img/anzhuo.png) no-repeat 0 0;
     margin-left: 76px;
+    display: block;
+}
+.aoyou{
+    display: block;
 }
 .leebao .ios1{
     width: 211px;

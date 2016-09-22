@@ -30,9 +30,6 @@
     <div class="button">
         <img src="img/button.png" alt="" class="only">
         <div class="y_vid" style="display: none;">
-            <!-- <video width="99%" height="99%" controls="controls">
-            <source src="http://zcfy.dl.hoolaigames.com/web/intro.mp4" type="video/mp4" /> -->
-            <!-- <script type="text/javascript" src="js/html5media.min.js"></script> -->
             <video src="http://cdn.tmfy.hulai.com/video/video201608261446.mp4&#10;" width="99%" height="99%" controls="controls">
             </video>
             <a class="close_video" href="#">guanbi</a>
@@ -58,20 +55,7 @@
                         <img class="cur" src="img/1.jpg" alt="">
                     </li>
                 </ul>
-                <!-- <ul class="dots">
-                    <li>
-                        <a href="javascript:;"></a>
-                    </li>
-                    <li>
-                        <a href="javascript:;"></a>
-                    </li>
-                    <li>
-                        <a href="javascript:;"></a>
-                    </li>
-                    <li>
-                        <a href="javascript:;"></a>
-                    </li>
-                </ul> -->
+        
             </div>
             <div class="server">
                 <h3>
@@ -87,15 +71,7 @@
                     <li class="gonggao">【公告】</li>
                 </ul>
                 <ul class="content">
-                    <!--                     <li>
-                        <span class="mark fl">【最新消息】</span><a href="#">最新消息最新消息最新消息最新消息</a><span class="time fr">2015/10/28</span>
-                    </li>
-                    <li>
-                        <span class="mark fl">【最新消息】</span><a href="#">最新消息最新消息最新消息最新消息</a><span class="time fr">2015/10/28</span>
-                    </li>
-                    <li>
-                        <span class="mark fl">【最新消息】</span><a href="#">最新消息最新消息最新消息最新消息</a><span class="time fr">2015/10/28</span>
-                    </li> -->
+                 
                 </ul>
             </div>
             <div class="xinshou">
@@ -177,9 +153,11 @@
 
 
     <div class="leebao">
-        <div class="android"></div>
+        <div class="android">
+            <a href="http://cdn.tmfy.hulai.com/tmfygw-1.apk" class="aoyou"> <img src="img/anzhuo.png"></a>
+        </div>
         <div class="ios1">
-           <a href="javascript:;" id="mianfei"><img src="img/ios.png" alt=""> </a>
+           <a href="http://tracking.hoolai.com/tracking/508/" id="mianfei"><img src="img/ios.png" alt=""> </a>
         </div>
         <div class="last">
         </div>
@@ -199,16 +177,7 @@
         </div>
     </div>
 
-    <div class="tanchuang2">
-        <p>
-            安卓版本即将开放下载，
-            请关注官方微信获取最新消息！
-        </p>
-       
-        <div class="cha2">
 
-        </div>
-    </div>
     
 
     <script type="text/javascript">
@@ -232,13 +201,16 @@
                 oShadow.style.display = 'block';
                 oShadow.style.height = scrollHeight + 'px';
                 d.getElementById("weixinMsg").style.display = 'block';
-                // e.preventDefault();
-               /* location.replace("http://erweimads.zcfy.hulai.com/");*/
             }
             else if((useragent.match(/(iPhone|iPod|ios|iOS|iPad)/i))){
                 location.replace("http://tracking.hoolai.com/tracking/508/");
             } 
-       })
+       });
+        
+  
+
+
+
         });
     </script>
 </body>

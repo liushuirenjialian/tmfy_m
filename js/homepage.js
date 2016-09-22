@@ -223,12 +223,12 @@ $(function() {
         $('div.tanchuang').css('display','none');
     });
 
-    $('div.android').click(function() {
-        $('div.tanchuang2').css('display','block');
-    });
-    $('div.cha2').click(function() {
-        $('div.tanchuang2').css('display','none');
-    });
+    // $('div.android').click(function() {
+    //     $('div.tanchuang2').css('display','block');
+    // });
+    // $('div.cha2').click(function() {
+    //     $('div.tanchuang2').css('display','none');
+    // });
 
 
     $(function() {

@@ -38,6 +38,7 @@ body {
     position: absolute;
     top: 360px;
     left: 483px;
+    display: none;
 }
 ul.nav li.luntan {
     background: url(../img/luntan.jpg) no-repeat 0 0;

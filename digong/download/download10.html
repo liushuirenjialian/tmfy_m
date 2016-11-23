@@ -1,0 +1,178 @@
+<html><head>
+    <title>探墓风云手游下载</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" id="viewport">
+    <style type="text/css">
+        body{background: #fff; margin: 0;}
+
+        #main_container{position: relative;}
+
+        #main{-webkit-transform-origin: 0 0; width: 750px; min-height: 1220px;}
+
+        .tab{
+            display: none;
+            position: relative;
+            width: 750px;
+            height: 100%;
+        }
+
+        .tab.show{display: block;}
+        .tab .refer{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tab.android .refer{
+            background: url(http://cdn.tmfy.hulai.com/img/android.jpg) no-repeat;
+            background-color: #fff;
+        }
+
+        .tab.ios .refer{
+            background: url(http://cdn.tmfy.hulai.com/img/iOS.jpg) no-repeat;
+            background-color: #fff;
+        }
+    </style></head>
+
+
+<body>
+<div id="main_container" style="height: 610px;">
+    <div id="main" style="transform: translate3d(0px, 0px, 0px) scale(0.5); height: 1220px;">
+        <div id="weixin_show" class="tab">
+            <div class="refer">
+            </div>
+        </div>
+        <div id="weibo_show" class="tab">
+            <div class="refer">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var PAGESIZE = {
+        "width": 750,
+        "height": 1220
+    };
+
+    $(window).resize(reSize);
+    reSize();
+
+    function reSize() {
+        var pw = PAGESIZE.width;
+        var ph = PAGESIZE.height;
+        var tww = document.body.offsetWidth;
+        var twh = document.body.offsetHeight;
+        var wh = twh * pw / tww;
+        var sc = tww / pw;
+        var tw = Math.min(0, (pw - tww) * 0.5);
+        if (sc <= 1) {
+            tw = 0;
+        }
+        $('#main').css({
+            'transform': 'translate(' + tw + 'px, 0px) scale(' + sc + ')',
+            '-webkit-transform': 'translate3d(' + tw + 'px, 0px, 0px) scale(' + sc + ')',
+            'height': ph
+        });
+        $('#main_container').height(ph * sc);
+    }
+
+    var android_type = true;
+    var ios_type = true;
+
+
+    var android_link = android_type ? "http://cdn.tmfy.hulai.com/wxtg/tmfyly_wxtg_10.apk" : "http://tmfy.hulai.com/";
+    var ios_link = ios_type ? "http://tracking.hoolai.com/tracking/893/" : "http://tmfy.hulai.com/";
+    var android_qq_url = "";
+    var iOS_qq_url = "";
+
+
+    (function() {
+        var is_weixin = function() {
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        var is_weibo = function() {
+            if (ua.indexOf("weibo") > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        var params = function(u, p) {
+            var m = new RegExp("(?:&|/?)" + p + "=([^&$]+)").exec(u);
+            return m ? m[1] : '';
+        };
+
+        var download = function(url) {
+            if (ua.match(isIos) || ua == null) {
+                setTimeout(function(){
+                    window.location.href = url;
+                },500);
+            }else{
+                window.location.href = url;
+            }
+        };
+
+        var ua = navigator.userAgent.toLowerCase();
+        var isIos = /ipad|iphone|ipod|ios/i;
+        var isAndroid = /android/i;
+
+        function checkDownload() {
+            if (is_weixin()) {
+                if(isIos.test(navigator.userAgent.toLowerCase()) && ios_type) {
+                    if(ios_link.indexOf("javascript:") != -1){
+                        download(ios_link);
+                    } else if(iOS_qq_url.match(/^https?:\/\/\w+.\w+.qq.com\//)){
+                        download(iOS_qq_url);
+                    }else{
+                        $('#weixin_show').addClass("show ios");
+                    }
+                    return;
+                } else if(isAndroid.test(navigator.userAgent.toLowerCase()) && android_type) {
+                    if(android_link.indexOf("javascript:") != -1){
+                        download(android_link);
+                    } else if(android_qq_url.match(/^https?:\/\/\w+.\w+.qq.com\//)){
+                        download(android_qq_url);
+                    }else{
+                        $('#weixin_show').addClass("show android");
+                    }
+                    return;
+                }
+            } else if (is_weibo()){
+                if(isIos.test(navigator.userAgent.toLowerCase()) && ios_type) {
+                    if(ios_link.indexOf("javascript:") != -1){
+                        download(ios_link);
+                    } else {
+                        $('#weibo_show').addClass("show ios");
+                    }
+                    return;
+                } else if(isAndroid.test(navigator.userAgent.toLowerCase()) && android_type) {
+                    if(android_link.indexOf("javascript:") != -1){
+                        download(android_link);
+                    } else {
+                        $('#weibo_show').addClass("show android");
+                    }
+                    return;
+                }
+            }
+
+            if(ua.match(isIos) || ua == null) {
+                download(ios_link);
+            }else {
+                download(android_link);
+            }
+        }
+        checkDownload();
+    })();
+</script>
+
+
+</body></html>

@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
     var token = params(location.search,"code");
     if(!token){
         var urlTemplate = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2f851d6d80a37688&redirect_uri=##&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
-        //location.href = urlTemplate.replace("##",location.href);
+        location.href = urlTemplate.replace("##",location.href);
     }
 </script>
 <script src="http://sj.tmfy.hulai.com/digong/gameJs/game.min18.js"></script>

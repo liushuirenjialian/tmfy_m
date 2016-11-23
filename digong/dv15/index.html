@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>《探墓风云》-决战地宫</title>
+    <link rel="icon" type="image/GIF" href="res/icon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2d14ad1bcd20bcd9d51977cef8379d50";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+<canvas id="gameCanvas" width="720" height="1160"></canvas>
+
+<script src="http://cdn.tmfy.hulai.com/exploreTomb/src/sha1.js"></script>
+<script src="http://cdn.tmfy.hulai.com/exploreTomb/src/jweixin-1.0.0.js"></script>
+<script>
+    var params = function(u,paras){
+        var url = u;
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+        var paraObj = {}
+        for (i=0; j=paraString[i]; i++){
+            paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+        }
+        var ret = paraObj[paras.toLowerCase()];
+        if(typeof(ret)=="undefined"){
+            return "";
+        }else{
+            return ret;
+        }
+    };
+    var token = params(location.search,"code");
+    if(!token){
+        var urlTemplate = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2f851d6d80a37688&redirect_uri=##&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+        location.href = urlTemplate.replace("##",location.href);
+    }
+</script>
+<script src="http://sj.tmfy.hulai.com/digong/gameJs/game.min14.js"></script>
+<audio id="audioBg" src="http://sj.tmfy.hulai.com/digong/mp3/bg.mp3" loop preload="auto"></audio>
+</body>
+</html>

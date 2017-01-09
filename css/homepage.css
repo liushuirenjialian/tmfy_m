@@ -38,6 +38,11 @@ div.wrap_outer {
     top: 0;
     left: 0;
 }
+.slide ul.img a {
+   display: inline-block;
+   width: 582px;
+   height: 195px;
+}
 .slide ul.img li img {
     margin-top: 53px;
     margin-left: 10px;
